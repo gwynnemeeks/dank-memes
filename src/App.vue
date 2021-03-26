@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="pink lighten-2" light> </v-app-bar>
+    <v-app-bar app color="pink lighten-2" light> ??? </v-app-bar>
 
     <v-main>
       <router-view></router-view>
