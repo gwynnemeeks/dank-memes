@@ -1,6 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar app color="pink lighten-2" light> ??? </v-app-bar>
+    <v-app-bar app color="pink lighten-2" light>
+      <h1>Vue Meme Forum</h1>
+      <v-spacer></v-spacer>
+      <router-link to="/create"> Create </router-link>
+      |
+      <router-link to="/feed"> Memes </router-link>
+    </v-app-bar>
 
     <v-main>
       <router-view></router-view>
