@@ -17,3 +17,15 @@
 <script>
 export default {};
 </script>
+
+<style scoped>
+a {
+  text-decoration: none;
+}
+h1 {
+  color: rgb(83, 35, 49);
+}
+.router-link-active {
+  color: rgb(83, 35, 49);
+}
+</style>
