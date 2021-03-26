@@ -3,7 +3,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log("Create component mounted");
+  },
+  beforeDestroy() {
+    console.log("Create component about to be destroyed");
+  },
+};
 </script>
 
 <style></style>
