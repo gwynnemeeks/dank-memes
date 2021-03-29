@@ -1,9 +1,10 @@
 <template>
   <div>
-    <form>
-      <input type="text" v-model="imageURL" />
-      <input type="text" v-model="topText" />
-      <input type="text" v-model="bottomText" />
+    <form @submit.prevent="generateMeme">
+      <input placeholder="Image URL" type="text" v-model="imageURL" />
+      <input placeholder="Top Text" type="text" v-model="topText" />
+      <input placeholder="Bottom Text" type="text" v-model="bottomText" />
+      <button type="submit">Generate Meme!</button>
     </form>
   </div>
 </template>
@@ -16,6 +17,11 @@ export default {
       topText: "",
       bottomText: "",
     };
+  },
+  methods: {
+    generateMeme() {
+      console.log("building a meme....");
+    },
   },
 };
 </script>
