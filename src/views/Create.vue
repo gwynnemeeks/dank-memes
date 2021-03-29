@@ -20,11 +20,13 @@ export default {
       imageURL: "",
       topText: "",
       bottomText: "",
+      showMeme: false,
     };
   },
   methods: {
     generateMeme() {
       console.log("building a meme....");
+      this.showMeme = true;
     },
   },
 };
