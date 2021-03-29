@@ -6,11 +6,15 @@
       <input placeholder="Bottom Text" type="text" v-model="bottomText" />
       <button type="submit">Generate Meme!</button>
     </form>
+    <meme :top="topText" :bottom="bottomText" :imageURL="imageURL"></meme>
   </div>
 </template>
 
 <script>
+import Meme from "./Meme.vue";
+
 export default {
+  components: { Meme },
   data() {
     return {
       imageURL: "",
