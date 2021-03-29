@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import { db } from "../firebase";
 import Meme from "./Meme.vue";
 
 export default {
@@ -61,8 +62,15 @@ export default {
   },
   methods: {
     generateMeme() {
-      console.log("building a meme....");
       this.showMeme = true;
+    },
+    async saveMeme() {
+      await db.collection("memes").add({
+        topText: this.topText,
+        bottomText: this.bottomText,
+        imageURL: this.imageURL,
+        normalized: `${this.topText.toUpperCase()} ${this.bottomText.toUpperCase()}`,
+      });
     },
   },
 };
