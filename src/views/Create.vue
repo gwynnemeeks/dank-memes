@@ -1,14 +1,21 @@
 <template>
-  <h1>This is the Create page</h1>
+  <div>
+    <form>
+      <input type="text" v-model="imageURL" />
+      <input type="text" v-model="topText" />
+      <input type="text" v-model="bottomText" />
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    console.log("Create component mounted");
-  },
-  beforeDestroy() {
-    console.log("Create component about to be destroyed");
+  data() {
+    return {
+      imageURL: "",
+      topText: "",
+      bottomText: "",
+    };
   },
 };
 </script>
