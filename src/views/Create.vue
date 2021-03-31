@@ -42,6 +42,11 @@
         :imageURL="imageURL"
         :width="800"
       />
+      <div class="text-center mt-3">
+        <v-btn type="button" @click="saveMeme" color="pink lighten-2">
+          Save this meme
+        </v-btn>
+      </div>
     </div>
   </v-container>
 </template>
