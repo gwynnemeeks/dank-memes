@@ -42,11 +42,17 @@
         :imageURL="imageURL"
         :width="800"
       />
+      <div class="text-center mt-3">
+        <v-btn type="button" @click="saveMeme" color="pink lighten-2">
+          Save this meme
+        </v-btn>
+      </div>
     </div>
   </v-container>
 </template>
 
 <script>
+import { db } from "../firebase";
 import Meme from "./Meme.vue";
 
 export default {
@@ -61,8 +67,15 @@ export default {
   },
   methods: {
     generateMeme() {
-      console.log("building a meme....");
       this.showMeme = true;
+    },
+    async saveMeme() {
+      await db.collection("memes").add({
+        topText: this.topText,
+        bottomText: this.bottomText,
+        imageURL: this.imageURL,
+        normalized: `${this.topText.toUpperCase()} ${this.bottomText.toUpperCase()}`,
+      });
     },
   },
 };
