@@ -76,6 +76,7 @@ export default {
         imageURL: this.imageURL,
         normalized: `${this.topText.toUpperCase()} ${this.bottomText.toUpperCase()}`,
       });
+      this.$router.push("/feed");
     },
   },
 };
